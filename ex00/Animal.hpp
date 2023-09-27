@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 13:36:18 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/26 19:13:07 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/27 14:19:10 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,24 @@ class Animal
         std :: string type ;
     public :
         Animal();
+        Animal(const Animal &obj);
+        Animal & operator = (const Animal &obj);
         std :: string getType() const;
         virtual void makeSound() const;
+        ~Animal();
+};
+
+class WrongAnimal
+{
+    protected :
+        std :: string type;
+    public :
+        WrongAnimal();
+        WrongAnimal(const WrongAnimal &obj);
+        WrongAnimal & operator = (const WrongAnimal &obj);
+        std :: string getType() const;
+        void makeSound() const;
+        ~WrongAnimal();
 };
 
 #endif

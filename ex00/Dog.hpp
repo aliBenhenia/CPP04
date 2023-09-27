@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:31:38 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/26 19:12:22 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/27 14:15:08 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 #include "Animal.hpp"
 class Dog : public Animal{
     public :    
-          Dog();
-          void makeSound()const
-            {
-                std :: cout << type  << " MAKES SOUND\n";
-            }
+        Dog();
+        Dog(const Dog &obj);
+        Dog & operator =(const Dog &obj);
+        void makeSound()const;
+        std :: string  getType() const;
+        ~Dog();
 };
+
 
 #endif
