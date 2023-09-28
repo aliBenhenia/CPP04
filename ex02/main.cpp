@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 14:43:03 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/28 15:14:36 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:29:56 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,8 @@
 
 int main()
 {
-    int i = 0;
-    int size = 6;
-    Animal *animals[size];
-    while (i < size / 2)
-    {
-        animals[i] = new Dog;
-        i++;
-    }
-    i = size / 2;
-    while (i < size)
-    {
-        animals[i] = new Cat;
-        i++;
-    }
-    i = 0;
-    while (i < size)
-    {
-        delete animals[i];
-        i++;
-    }
+    Cat obj;
+    Animal *p1 = &obj;
+    // Animal *p2 = new Animal;
     return (0);
 }

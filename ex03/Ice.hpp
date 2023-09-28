@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 14:43:03 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/28 15:14:36 by abenheni         ###   ########.fr       */
+/*   Created: 2023/09/28 18:56:54 by abenheni          #+#    #+#             */
+/*   Updated: 2023/09/28 19:02:44 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef ICE_H
+#define ICE_H
+#include "AMateria.hpp"
 
-int main()
+class Ice : public AMateria
 {
-    int i = 0;
-    int size = 6;
-    Animal *animals[size];
-    while (i < size / 2)
-    {
-        animals[i] = new Dog;
-        i++;
-    }
-    i = size / 2;
-    while (i < size)
-    {
-        animals[i] = new Cat;
-        i++;
-    }
-    i = 0;
-    while (i < size)
-    {
-        delete animals[i];
-        i++;
-    }
-    return (0);
-}
+    public :
+        Ice();  
+        Ice(const Ice obj);  
+        Ice &operator =(const Ice obj);
+        AMateria* clone() const;
+        void use(ICharacter& target);
+        ~Ice();
+};
+
+#endif

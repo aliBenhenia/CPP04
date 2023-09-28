@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 14:43:03 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/28 15:14:36 by abenheni         ###   ########.fr       */
+/*   Created: 2023/09/26 18:31:38 by abenheni          #+#    #+#             */
+/*   Updated: 2023/09/28 12:17:57 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DOG_H
+#define DOG_H
 #include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
+class Dog : public Animal{
+    private :
+        Brain *brain_obj;
+    public :    
+        Dog();
+        Dog(const Dog &obj);
+        Dog & operator =(const Dog &obj);
+        void makeSound()const;
+        std :: string  getType() const;
+        ~Dog();
+};
 
-int main()
-{
-    int i = 0;
-    int size = 6;
-    Animal *animals[size];
-    while (i < size / 2)
-    {
-        animals[i] = new Dog;
-        i++;
-    }
-    i = size / 2;
-    while (i < size)
-    {
-        animals[i] = new Cat;
-        i++;
-    }
-    i = 0;
-    while (i < size)
-    {
-        delete animals[i];
-        i++;
-    }
-    return (0);
-}
+
+#endif
