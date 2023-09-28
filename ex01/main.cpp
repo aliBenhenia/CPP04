@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 14:43:03 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/27 17:17:16 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:33:33 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,26 @@
 
 int main()
 {
+    int i = 0;
+    int size = 6;
+    Animal *animals[size];
+    while (i < size / 2)
     {
-            Dog objectDog;
-            Cat objectCat;
-
-            
-            Animal* j = &objectDog;
-            Animal* i = &objectCat;
-            std::cout << j->getType() << " " << std::endl;
-            std::cout << i->getType() << " " << std::endl;
-            i->makeSound(); 
-            j->makeSound();
+        animals[i] = new Dog;
+        i++;
     }
-    std :: cout << "-------------------------------------------------\n";
+    i = size / 2;
+    while (i < size)
     {
-            WrongCat objectCat;
-
-            WrongAnimal* i = &objectCat;
-            std::cout << i->getType() << " " << std::endl;
-            i->makeSound(); 
+        animals[i] = new Animal;
+        i++;
     }
+    i = 0;
+    while (i < size)
+    {
+        delete animals[i];
+        i++;
+    }
+    system ("leaks fixed");
     return (0);
 }

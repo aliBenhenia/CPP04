@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:26:44 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/27 16:48:14 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/28 12:23:37 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 Cat :: Cat() 
 {
+    brain_obj = new Brain;
     type = "Cat";
     std :: cout << "cat default constructor called\n";
 }
+
 Cat :: Cat(const Cat &obj) 
 {
     this->type =  obj.type; 
     std :: cout << "cat copy constructor called\n";
 }
+
 Cat &Cat :: operator=(const Cat &obj)
 {
     this->type =  obj.type; 
@@ -40,6 +43,7 @@ std :: string Cat :: getType() const
 
 Cat :: ~Cat() 
 {
+    delete brain_obj;
     std :: cout << "cat destructor constructor called\n";
 }
 
