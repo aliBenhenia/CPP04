@@ -6,14 +6,16 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 10:43:32 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 16:10:37 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 19:43:36 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
-#include "IMateriaSource.hpp"
+// #include "IMateriaSource.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
 
 int main()
 {

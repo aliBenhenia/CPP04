@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:35:05 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 15:26:22 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 19:29:21 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ AMateria  :: AMateria(const AMateria &obj)
 }
 AMateria  :: AMateria(std::string const & type):type(type)
 {
-    // this->type = type;
     std :: cout << "AMateria parametized constructor" <<  std :: endl;
 }
 AMateria & AMateria ::  operator = (const AMateria &obj)

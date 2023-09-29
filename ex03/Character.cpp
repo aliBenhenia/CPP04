@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 11:11:10 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 15:20:25 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 19:36:52 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ICharacter.hpp"
+#include "Character.hpp"
 #include "AMateria.hpp"
 
 Character :: Character()

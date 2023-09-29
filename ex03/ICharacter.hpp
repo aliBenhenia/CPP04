@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 11:10:39 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 15:12:55 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 21:40:40 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,5 @@ class ICharacter
         virtual void use(int idx, ICharacter& target) = 0;
 };
 
-class Character : public ICharacter{
-    private :
-        std :: string name;
-        AMateria *data[4];
-    public :
-        Character();
-        Character(const Character &obj);
-        Character(std::string const &name);
-        Character &operator =(const Character &obj);
-        std::string const & getName() const ;
-        void equip(AMateria* m);
-        void unequip(int idx);
-        void use(int idx, ICharacter& target);
-        ~Character();
-};
 #endif
 
