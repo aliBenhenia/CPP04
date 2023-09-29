@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 11:11:10 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 12:09:55 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 15:20:25 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void Character :: unequip(int idx)
 }
 void Character :: use(int idx, ICharacter& target)
 {
-    if (idx >= 0 && < 4 && data[idx] != NULL)
+    if (idx >= 0 && idx < 4 && data[idx] != NULL)
         data[idx]->use(target);
 }
 Character :: ~Character()

@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 19:03:14 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 11:57:12 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 16:10:19 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ AMateria *Ice :: clone()const
 	Ice *obj = new Ice(*this);
 	return (obj);
 }
-void Ice :: use(ICharacter& target)const
+void Ice :: use(ICharacter& target)
 {
-	std::cout << "* shoots an cure bolt at " << target.getName() << std :: endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << std :: endl;
 }
 Ice :: ~Ice()
 {

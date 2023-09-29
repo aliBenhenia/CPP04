@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:28:25 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 13:51:23 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 15:19:50 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iostream>
 #include <string>
 #include "ICharacter.hpp"
-
+class ICharacter;
 class AMateria
 {
     protected:

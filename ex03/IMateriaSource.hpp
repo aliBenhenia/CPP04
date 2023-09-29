@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 13:57:27 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 14:12:03 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 16:03:01 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class IMateriaSource
 class MateriaSource : public IMateriaSource{
     private :
         AMateria *data[4];
-        int numLearnedMaterias;
     public :
     MateriaSource();
     MateriaSource(const MateriaSource &obj);

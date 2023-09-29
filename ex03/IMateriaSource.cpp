@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 14:03:53 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 14:16:55 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 16:03:23 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,62 @@
 
 MateriaSource :: MateriaSource()
 {
+	int i = 0;
+	while (i < 4)
+	{
+		data[i] = NULL;
+		i++;
+	}
+
 	std :: cout << "MateriaSource default constructor" << std :: endl;
 }
 MateriaSource :: MateriaSource(const MateriaSource &obj)
 {
+	int i = 0;
+	while (i < 4)
+	{
+		data[i] = obj.data[i];
+		i++;
+	}
+
 	std :: cout << "MateriaSource copy constructor" << std :: endl;
 }
 MateriaSource & MateriaSource :: operator=(const MateriaSource &obj)
 {
+	int i = 0;
+	while (i < 4)
+	{
+		data[i] = obj.data[i];
+		i++;
+	}
 	std :: cout << "MateriaSource assignment constructor" << std :: endl;
+	return (*this);
 }
 void MateriaSource :: learnMateria(AMateria* m)
 {
-	if (numLearnedMaterias < 4)
+	int i = 0;
+	while (i < 4)
 	{
-		data[numLearnedMaterias] = m->clone();
-		numLearnedMaterias++;
+		if (data[i] == NULL)
+		{
+			data[i] = m->clone();
+			break;
+		}
+		i++;
 	}
 }
-AMateria *AMateria :: createMateria(std::string const & type)
+AMateria *MateriaSource::createMateria(std::string const &type)
 {
 	int i = 0;
-	while (i < numLearnedMaterias)
+	while (i < 4)
 	{
-		if (data[numLearnedMaterias]->getType() == type)
-			return (data[numLearnedMaterias]->clone());
+		if (data[i] != NULL && data[i]->getType() == type)
+			return (data[i]->clone());
 		i++;
 	}
 	return (NULL);
 }
+
 MateriaSource :: ~MateriaSource()
 {
 	std :: cout << "MateriaSource destructor" << std :: endl;

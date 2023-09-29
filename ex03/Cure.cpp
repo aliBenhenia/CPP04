@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 10:40:05 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 11:55:08 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 16:06:30 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cure :: Cure(const Cure &obj)
     type = obj.type;
     std :: cout << "Cure default constructor" <<  std :: endl;
 }
-Cure &Cure :: operator=(const Cure obj)
+Cure &Cure :: operator=(const Cure &obj)
 {
     type = obj.type;
     return (*this);
@@ -31,9 +31,9 @@ AMateria *Cure :: clone()const
     Cure *obj = new Cure(*this);
     return (obj);
 }
-void Cure :: use(ICharacter& target)const
+void Cure :: use(ICharacter& target)
 {
-   std::cout << "* shoots an ice bolt at " << target.getName() << std :: endl;
+   std::cout <<  "* heals " << target.getName() << "'s wounds *"<< std :: endl;
 }
 Cure :: ~Cure()
 {
