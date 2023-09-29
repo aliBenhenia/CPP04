@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 19:03:14 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/28 19:12:33 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:57:12 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 Ice :: Ice() : AMateria("ice")
 {
-    std :: cout << "ice default constructor" <<  std :: endl;
+	std :: cout << "ice default constructor" <<  std :: endl;
 }
-Ice :: Ice(const Ice obj)
+Ice :: Ice(const Ice &obj)
 {
-    type = obj.type;
-    std :: cout << "ice default constructor" <<  std :: endl;
+	type = obj.type;
+	std :: cout << "ice default constructor" <<  std :: endl;
 }
-Ice &Ice :: operator=(const Ice obj)
+Ice &Ice :: operator=(const Ice &obj)
 {
-    type = obj.type;
-    return (*this);
+	type = obj.type;
+	return (*this);
 }
 AMateria *Ice :: clone()const
 {
-    Ice *obj = new Ice;
-    return (obj);
+	Ice *obj = new Ice(*this);
+	return (obj);
 }
 void Ice :: use(ICharacter& target)const
 {
-    
+	std::cout << "* shoots an cure bolt at " << target.getName() << std :: endl;
 }
 Ice :: ~Ice()
 {
-    std :: cout << "ice destructor " <<  std :: endl;
+	std :: cout << "ice destructor " <<  std :: endl;
 }
