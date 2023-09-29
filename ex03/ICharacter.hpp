@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 11:10:39 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 12:22:38 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 13:42:16 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 #ifndef ICHARACTER
 #define ICHARACTER
 
-// #include <iostream>
-// #include <string>
+#include <iostream>
+#include <string>
 #include "AMateria.hpp"
+
 class ICharacter
 {
     public:

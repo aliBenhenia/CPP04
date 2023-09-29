@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 10:43:32 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 12:22:29 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/29 14:18:02 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 
 int main()
 {
-    // AMateria *p = new Ice;
-    // AMateria *test = p->clone();
-    // std :: cout << test->getType() << "\n";
-    // delete p;
+    
+    return 0;
 }
