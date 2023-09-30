@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 10:43:32 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 16:56:43 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:07:37 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,13 @@ int main()
         tmp = src->createMateria("cure");
         me->equip(tmp);
         ICharacter* bob = new Character("bob");
+        
         me->use(0, *bob);
         me->use(1, *bob);
         delete bob;
         delete me;
         delete src;
+        
+        
     return 0;
 }

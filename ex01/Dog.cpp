@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:33:29 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 15:52:27 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:42:17 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,14 @@ std :: string Dog ::  getType() const
 
 Dog :: Dog(const Dog &obj)
 {
-    this->type = obj.type;
+    this->type = obj.getType();
+    this->brain_obj = new Brain(*brain_obj);
     std :: cout << "dog copy constructor called\n";
 }
 
 Dog &Dog :: operator =(const Dog &obj)
 {
-    this->type = obj.type;
+    this->type = obj.getType();
     std :: cout << "dog assignemnt operator called\n";
     return (*this);
 }

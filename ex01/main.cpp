@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 14:43:03 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 16:48:43 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:13:07 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,14 @@ int main()
         animals[i] = new Cat;
         i++;
     }
+    Dog basic;
+    Dog tmmp = basic;
     i = 0;
     while (i < size)
     {
         delete animals[i];
         i++;
     }
+
     return (0);
 }
