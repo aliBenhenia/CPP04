@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 10:43:32 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 19:07:37 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 22:49:54 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 #include "MateriaSource.hpp"
 
 int main()
-{
-        MateriaSource* src = new MateriaSource();
+{   
+       IMateriaSource* src = new MateriaSource();
         src->learnMateria(new Ice());
         src->learnMateria(new Cure());
         ICharacter* me = new Character("me");
@@ -28,13 +28,10 @@ int main()
         tmp = src->createMateria("cure");
         me->equip(tmp);
         ICharacter* bob = new Character("bob");
-        
         me->use(0, *bob);
         me->use(1, *bob);
         delete bob;
         delete me;
         delete src;
-        
-        
     return 0;
 }

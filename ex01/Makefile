@@ -6,7 +6,7 @@
 #    By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 14:41:22 by abenheni          #+#    #+#              #
-#    Updated: 2023/09/30 17:19:16 by abenheni         ###   ########.fr        #
+#    Updated: 2023/09/30 21:59:37 by abenheni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJ = $(SRC:%.cpp=%.o)
 all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ)  -o $(NAME)
-%.o : %.cpp Animal.hpp Dog.hpp Cat.hpp Brain.hpp
+%.o : %.cpp Animal.hpp Dog.hpp Cat.hpp Brain.hpp WrongAnimal.hpp WrongCat.hpp
 	$(CC) $(CFLAGS)  -c $< -o $@ 
 clean :
 	$(RM) $(OBJ)

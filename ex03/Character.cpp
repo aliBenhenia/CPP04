@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 11:11:10 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 19:36:52 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 22:49:20 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,25 @@
 Character :: Character()
 {
     std :: cout << "Character default constructor" <<  std :: endl;
+    int i = 0;
+    while (i < 4)
+    {
+       data[i] = NULL; 
+       i++;
+    }
 }
 Character :: Character(const Character &obj)
 {
     this->name = obj.name;
+    int i = 0;
+    while (i < 4)
+    {
+       data[i] = obj.data[i]; 
+       i++;
+    }
     std :: cout << "Character copy constructor" <<  std :: endl;
 }
+
 Character :: Character(std::string const &name)
 {
     this->name = name;
@@ -35,6 +48,7 @@ Character :: Character(std::string const &name)
     }
     std :: cout << "Character parametized constructor" <<  std :: endl;
 }
+
 Character &Character :: operator=(const Character &obj)
 {
     this->name = obj.name;

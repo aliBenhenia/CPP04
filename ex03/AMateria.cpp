@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:35:05 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 19:29:21 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 22:37:33 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ AMateria & AMateria ::  operator = (const AMateria &obj)
 std::string const & AMateria ::  getType() const
 {
     return (type);
+}
+void AMateria :: use(ICharacter& target)
+{
+     std::cout << "* uses " << type << " on " << target.getName() << " *" << std::endl;
 }
 AMateria :: ~AMateria()
 {

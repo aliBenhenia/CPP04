@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:28:25 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 21:43:03 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 22:40:12 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class AMateria
     AMateria(std::string const & type);
     std::string const & getType() const;
     virtual AMateria* clone() const = 0;
-    virtual void use(ICharacter& target) = 0;
+    virtual void use(ICharacter& target);
     virtual ~AMateria();
 };
 

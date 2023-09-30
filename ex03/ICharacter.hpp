@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 11:10:39 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 17:06:25 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 22:33:41 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ICharacter
         virtual std::string const & getName() const = 0;
         virtual void equip(AMateria* m) = 0;
         virtual void unequip(int idx) = 0;
-        virtual void use(int idx, ICharacter& target) = 0;
+        virtual void use(int idx, ICharacter& target) = 0 ;
 };
 
 #endif
