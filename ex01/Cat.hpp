@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:29:09 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/28 12:17:11 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:04:10 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,5 @@ class Cat : public Animal{
         ~Cat();
 };
 
-class WrongCat : public WrongAnimal{
-    public :
-         WrongCat();
-         WrongCat(const WrongCat &obj);
-         WrongCat &operator=(const WrongCat &obj);
-         void makeSound()const;
-         std :: string getType() const;
-         ~WrongCat();
-};
+
 #endif

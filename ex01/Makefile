@@ -6,7 +6,7 @@
 #    By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 14:41:22 by abenheni          #+#    #+#              #
-#    Updated: 2023/09/28 12:18:11 by abenheni         ###   ########.fr        #
+#    Updated: 2023/09/30 15:01:33 by abenheni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = fixed
 CC = c++
 RM = rm -f
 CFLAGS = #-Wall -Wextra -Werror -std=c++98
-SRC =  main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
+SRC =  main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp  WrongAnimal.cpp WrongCat.cpp
 OBJ = $(SRC:%.cpp=%.o)
 all : $(NAME)
 $(NAME) : $(OBJ)

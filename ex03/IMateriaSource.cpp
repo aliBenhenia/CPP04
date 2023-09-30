@@ -6,11 +6,10 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 14:03:53 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 19:44:00 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:58:57 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
 
 MateriaSource :: MateriaSource()

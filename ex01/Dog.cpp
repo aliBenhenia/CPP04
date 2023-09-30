@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:33:29 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/28 12:20:55 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:52:27 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ Dog &Dog :: operator =(const Dog &obj)
 Dog :: ~Dog()
 {
     delete brain_obj;
-    type = "Dog";
     std :: cout << "dog destructor called\n";
 }

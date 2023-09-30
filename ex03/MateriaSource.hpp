@@ -6,13 +6,15 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:40:48 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/29 19:41:18 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/30 17:00:58 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#ifndef IMATERIASOURCE
+#define IMATERIASOURCE
 #include "IMateriaSource.hpp"
-class MateriaSource : public IMateriaSource{
+class 
+MateriaSource : public IMateriaSource{
     private :
         AMateria *data[4];
     public :
@@ -23,3 +25,4 @@ class MateriaSource : public IMateriaSource{
     AMateria* createMateria(std::string const & type);
     ~MateriaSource();
 };
+#endif

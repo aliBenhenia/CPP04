@@ -13,7 +13,6 @@ Brain :: Brain(const Brain &obj)
         ideas[i] = obj.ideas[i];
         i++;
     }
-    
     std :: cout << "Brain copy constructor" << std :: endl;
 }
 
