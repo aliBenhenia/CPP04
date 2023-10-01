@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.cpp                                 :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 14:03:53 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 16:58:57 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/10/01 13:09:54 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,12 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 
 MateriaSource :: ~MateriaSource()
 {
+	int i = 0;
+	while (i < 4)
+	{
+		delete data[i];
+		i++;
+	}
+	
 	std :: cout << "MateriaSource destructor" << std :: endl;
 }

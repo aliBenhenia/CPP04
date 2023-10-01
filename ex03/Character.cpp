@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 11:11:10 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 22:49:20 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/10/01 15:53:39 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ Character :: Character(const Character &obj)
     int i = 0;
     while (i < 4)
     {
-       data[i] = obj.data[i]; 
+        if (data[i] != NULL)
+            data[i] = obj.data[i]->clone();
+        else
+            data[i] = NULL;
        i++;
     }
     std :: cout << "Character copy constructor" <<  std :: endl;
@@ -52,6 +55,15 @@ Character :: Character(std::string const &name)
 Character &Character :: operator=(const Character &obj)
 {
     this->name = obj.name;
+    int i = 0;
+    while (i < 4)
+    {
+        if (data[i] != NULL)
+            data[i] = obj.data[i]->clone();
+        else
+            data[i] = NULL;
+       i++;
+    }
     return (*this);
 }
 std::string const &Character ::  getName() const 
@@ -65,7 +77,7 @@ void Character :: equip(AMateria* m)
     {
         if (!data[i])
         {
-            data[i] = m;
+            data[i] = m->clone();
             break;
         }
         i++;
