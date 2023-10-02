@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:55:00 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 15:05:45 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/10/02 19:30:40 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 Animal :: Animal()
 {
     type = "animal";
-    std :: cout  << "animal default constructor\n";
+    std :: cout  << "animal default constructor" <<  std :: endl;
 }
 Animal :: Animal(const Animal &obj)
 {
     this->type = obj.type;
-    std :: cout << "animal copy constructor \n";
+    std :: cout << "animal copy constructor " <<  std :: endl;
 }
 
 Animal &Animal :: operator=(const Animal &obj)
 {
-    std :: cout << "animal asiignemt constructor \n";
+    std :: cout << "animal asiignemt constructor " <<  std :: endl;
     this->type = obj.type;
     return (*this);
 }
@@ -42,5 +42,5 @@ void Animal :: makeSound() const
 
 Animal :: ~Animal()
 {
-    std :: cout  << "animal destructor\n";
+    std :: cout  << "animal destructor" <<  std :: endl;
 }

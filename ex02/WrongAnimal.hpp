@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 14:43:03 by abenheni          #+#    #+#             */
-/*   Updated: 2023/10/02 19:38:03 by abenheni         ###   ########.fr       */
+/*   Created: 2023/09/30 11:10:28 by abenheni          #+#    #+#             */
+/*   Updated: 2023/09/30 15:03:15 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
 
-int main()
+
+#ifndef WRONGANIMAL_H
+#define WRONGANIMAL_H
+#include <iostream>
+#include <string>
+class WrongAnimal
 {
-    int i = 0;
-    int size = 10;
-    Animal *animals[size];
-    while (i < size / 2)
-    {
-        animals[i] = new Dog;
-        i++;
-    }
-    i = size / 2;
-    while (i < size)
-    {
-        animals[i] = new Cat;
-        i++;
-    }
-    i = 0;
-    while (i < size)
-    {
-        delete animals[i];
-        i++;
-    }
-    return (0);
-}
+    protected :
+        std :: string type;
+    public :
+        WrongAnimal();
+        WrongAnimal(const WrongAnimal &obj);
+        WrongAnimal & operator = (const WrongAnimal &obj);
+        std :: string getType() const;
+        void makeSound() const;
+        ~WrongAnimal();
+};
+#endif

@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 11:09:29 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/30 11:20:14 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/10/02 19:31:40 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 WrongAnimal :: WrongAnimal()
 {
     type = "WrongAnimal";
-    std :: cout  << "WrongAnimal  default constructor\n";
+    std :: cout  << "WrongAnimal  default constructor"<<  std :: endl;
 }
 WrongAnimal :: WrongAnimal(const WrongAnimal &obj)
 {
     this->type = obj.type;
-    std :: cout << "WrongAnimal copy constructor \n";
+    std :: cout << "WrongAnimal copy constructor " <<std :: endl;
 }
 
 WrongAnimal &WrongAnimal :: operator=(const WrongAnimal &obj)
 {
-      std :: cout << "WrongAnimal asiignemt constructor \n";
+      std :: cout << "WrongAnimal asiignemt constructor "<<std :: endl;
     this->type = obj.type;
     return (*this);
 }
@@ -43,5 +43,5 @@ void WrongAnimal :: makeSound() const
 
 WrongAnimal :: ~WrongAnimal()
 {
-    std :: cout  << "WrongAnimal destructor\n";
+    std :: cout  << "WrongAnimal destructor" << std :: endl;
 }

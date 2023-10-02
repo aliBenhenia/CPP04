@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:26:44 by abenheni          #+#    #+#             */
-/*   Updated: 2023/10/01 15:57:24 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/10/02 19:33:36 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,27 @@ Cat :: Cat()
 {
     brain_obj = new Brain();
     type = "Cat";
-    std :: cout << "cat default constructor called\n";
+    std :: cout << "cat default constructor called"<<std :: endl;
 }
 
 Cat :: Cat(const Cat &obj) 
 {
     this->type =  obj.getType();
     this->brain_obj = new Brain(*obj.brain_obj);
-    std :: cout << "cat copy constructor called\n";
+    std :: cout << "cat copy constructor called"<<std :: endl;
 }
 
 Cat &Cat :: operator=(const Cat &obj)
 {
     this->type =  obj.getType();
     this->brain_obj = new Brain(*obj.brain_obj);
-    std :: cout << "cat assignement constructor called\n";
+    std :: cout << "cat assignement constructor called "<<std :: endl;
     return (*this);
 }
 
 void Cat :: makeSound()const
 {
-    std :: cout <<  "Cat MAKES SOUND\n";
+    std :: cout <<  "Cat MAKES SOUND "<<std :: endl;
 }
 std :: string Cat :: getType() const 
 {
@@ -46,7 +46,7 @@ std :: string Cat :: getType() const
 Cat :: ~Cat() 
 {
     delete brain_obj;
-    std :: cout << "cat destructor constructor called\n";
+    std :: cout << "cat destructor constructor called"<<std :: endl;
 }
 
 

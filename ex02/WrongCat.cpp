@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 11:14:35 by abenheni          #+#    #+#             */
-/*   Updated: 2023/10/02 19:32:28 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/10/02 19:42:27 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,24 @@
 WrongCat :: WrongCat() 
 {
     type = "WrongCat";
-    std :: cout << "WrongCat default constructor called"<<std :: endl;
+    std :: cout << "WrongCat default constructor called"<< std :: endl;
 }
 
 WrongCat :: WrongCat(const WrongCat &obj) 
 {
     this->type =  obj.type; 
-    std :: cout << "WrongCat copy constructor called"<<std :: endl;
+    std :: cout << "WrongCat copy constructor called"<< std :: endl;
 }
 
 WrongCat &WrongCat :: operator=(const WrongCat &obj)
 {
     this->type =  obj.type; 
-    std :: cout << "WrongCat assignement constructor called"<<std :: endl;
+    std :: cout << "WrongCat assignement constructor called"<< std :: endl;
     return (*this);
 }
 void WrongCat :: makeSound()const
 {
-    std :: cout <<  "WrongCat MAKES SOUND"<<std :: endl;
+    std :: cout <<  "WrongCat MAKES SOUND"<< std :: endl;
 }
 std :: string WrongCat :: getType() const 
 {
@@ -41,5 +41,5 @@ std :: string WrongCat :: getType() const
 }
 WrongCat :: ~WrongCat() 
 {
-    std :: cout << "WrongCat destructor constructor called"<<std :: endl;
+    std :: cout << "WrongCat destructor constructor called"<< std :: endl;
 }

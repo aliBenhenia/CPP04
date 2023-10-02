@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 14:03:53 by abenheni          #+#    #+#             */
-/*   Updated: 2023/10/01 13:09:54 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/10/01 18:36:32 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,38 @@ MateriaSource :: MateriaSource()
 		data[i] = NULL;
 		i++;
 	}
-
 	std :: cout << "MateriaSource default constructor" << std :: endl;
 }
 MateriaSource :: MateriaSource(const MateriaSource &obj)
 {
 	int i = 0;
-	while (i < 4)
-	{
-		data[i] = obj.data[i];
-		i++;
-	}
-
+    while (i < 4)
+    {
+        if (data[i] != NULL)
+            data[i] = obj.data[i]->clone();
+        else
+            data[i] = NULL;
+       i++;
+    }
 	std :: cout << "MateriaSource copy constructor" << std :: endl;
 }
 MateriaSource & MateriaSource :: operator=(const MateriaSource &obj)
 {
-	int i = 0;
-	while (i < 4)
-	{
-		data[i] = obj.data[i];
-		i++;
-	}
+	 int i = 0;
+    while (i < 4)
+    {
+        delete data[i];
+        i++;
+    }
+    i = 0;
+    while (i < 4)
+    {
+        if (data[i] != NULL)
+            data[i] = obj.data[i]->clone();
+        else
+            data[i] = NULL;
+       i++;
+    }
 	std :: cout << "MateriaSource assignment constructor" << std :: endl;
 	return (*this);
 }

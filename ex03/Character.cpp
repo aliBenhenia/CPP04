@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 11:11:10 by abenheni          #+#    #+#             */
-/*   Updated: 2023/10/01 15:53:39 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/10/01 16:51:57 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,12 @@ Character &Character :: operator=(const Character &obj)
 {
     this->name = obj.name;
     int i = 0;
+    while (i < 4)
+    {
+        delete data[i];
+        i++;
+    }
+    i = 0;
     while (i < 4)
     {
         if (data[i] != NULL)
